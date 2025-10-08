@@ -1,0 +1,51 @@
+.main-container-introduction{
+  margin-top:1%;
+}
+
+.introduction-section{
+  min-width: 700px;
+  width: 40vw;
+  display: flex; /* Use flexbox */
+  justify-content: space-between; /* Space out items */
+  align-items: center; /* Vertically align items */
+}
+
+#my-role{
+  color: #a1a1a1;
+  min-width: 10vw;
+  min-width: 200px;
+}
+
+.introduction-section h3,
+.introduction-section p{
+  margin-bottom: 5px;
+}
+
+.introduction-section p{
+  width: 100%;
+  max-width: 550px;
+}
+
+.introduction-section-paragraph{
+  margin-top: 2.25%;
+  font-size: 17px;
+}
+
+#about-me-button{
+  margin-top: 4%;
+  display: flex;
+}
+
+.my-photo {
+  width: 300px; /* Increased size */
+  height: 310px; /* Increased size */
+  border-radius: 50%;
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  margin-left: 80px; /* Space between text content and photo */
+  border: 4px solid rgb(8, 146, 167); /* Changed border color to a vibrant cyan */
+  background-color: #333333ab; /* Changed background color to a dark grey */
+}
+
+.introduction-text-content {
+  flex-grow: 1; /* Allows the text content to take up available space */
+}

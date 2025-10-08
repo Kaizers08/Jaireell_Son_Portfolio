@@ -1,0 +1,53 @@
+<div class="wrapper">
+  <div class="contact-content">
+    <div class="contact-section">
+      <div class="contact-details">
+        <p id="section-contact" class="small-paragraph">Get in touch</p>
+      </div>
+      <h1 class="section-title">Contact</h1>
+      <div class="contact-info">
+        <p class="contact-description">
+          If you have any questions or you would like to hire me, feel free to reach out!
+        </p>
+        <p class="contact-details">
+          Email: <a [href]="'mailto:' + email">{{email}}</a>
+          <br>
+      LinkedIn Profile: <a [href]="linkedin" target="_blank" rel="noopener noreferrer">Jaireell Son S. Regala</a>
+        </p>
+      </div>
+    </div>
+
+
+    <form class="contact-form" #contactForm (ngSubmit)="sendData()">
+      <div class="form-group-contact">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="from_name" required>
+      </div>
+      <div class="form-group-contact">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="reply_to" required>
+      </div>
+      <div class="form-group-contact">
+        <label for="message">Message</label>
+        <textarea name="message" id="message" rows="5" required></textarea>
+      </div>
+
+      @if (message) {
+        <div class="message-container"
+             [ngClass]="{'success': isSuccess, 'error': !isSuccess}">
+          {{ message }}
+        </div>
+      } @else {
+
+      }
+
+
+      <div class="btn-container">
+        <app-button [buttonText]="'Send Message'" [buttonAction]="sendData.bind(this)"></app-button>
+      </div>
+
+
+    </form>
+  </div>
+</div>
+
